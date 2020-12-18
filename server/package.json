@@ -1,0 +1,26 @@
+{
+  "name": "book-a-room",
+  "version": "1.0.0",
+  "description": "A little rest api to help booking rooms at  station F",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoVarloud/bookARoom.git"
+  },
+  "author": "Hugo VM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HugoVarloud/bookARoom/issues"
+  },
+  "homepage": "https://github.com/HugoVarloud/bookARoom#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.8",
+    "nodemon": "^2.0.6"
+  }
+}
