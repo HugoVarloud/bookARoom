@@ -8,9 +8,6 @@ const roomSchema = mongoose.Schema({
         {
             name: String
         },
-        {
-            name: String
-        }
     ],
     createdAt: Date,
     updatedAt: Date
