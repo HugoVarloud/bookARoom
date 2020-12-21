@@ -54,8 +54,9 @@ router.post('/', async (req, res) => {
 // BOOK A ROOM BY UPDATING ITS STATE
 router.patch('/:roomId', async (req, res) => {
     try {
-        const bookedRoom = await Room.updateOne({ _id: req.params.roomId }, {$set: {name: req.body.name}})
-        res.json(bookedRoom)
+        const bookedRoom = await Room.updateOne({ _id: req.params.roomId }, {$set: {createdAt: req.body.createdAt}})
+        const deadLine = await Room.updateOne({ _id: req.params.roomId }, {$set: {updatedAt: req.body.updatedAt}})
+        res.json(bookedRoom, deadLine)
     } catch (err) {
         res.json({ message: err });
     }
