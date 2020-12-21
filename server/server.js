@@ -2,9 +2,11 @@ const express = require('express')
 const app = express()
 const mongoose = require("mongoose")
 const bodyParser = require('body-parser')
+const cors = require('cors')
 require('dotenv/config')
 
 app.use(bodyParser.json())
+app.use(cors())
 
 // Import Routes
 const roomRoute = require('./routes/rooms')
@@ -27,4 +29,6 @@ mongoose.connect(
     })
 
 // Server
-app.listen(3000)
+app.listen(3000, () => {
+    console.log('Server started on 3000')
+})
