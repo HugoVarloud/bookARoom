@@ -83,7 +83,7 @@
           </v-dialog>
         </v-row>
 
-        <v-row>
+        <v-row style="margin-top: 30px;">
           <v-col
             v-for="(item, index) in props.items"
             :key="index"
@@ -152,6 +152,8 @@
             </v-card>
           </v-col>
         </v-row>
+
+        
       </template>
     </v-data-iterator>
   </v-app>
