@@ -96,7 +96,7 @@
               v-if="timeCheck(item.updatedAt) == 'Libre'"
               style="max-width: 300px; min-height: 415px"
             >
-              <div>
+              <div style="display: flex; float: right;">
                 <v-btn icon @click="deleteRoom(item._id)"
                   ><v-icon>mdi-close</v-icon></v-btn
                 >
