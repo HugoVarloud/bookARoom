@@ -4,9 +4,9 @@
       <h1 id="addTodo">Room Manager</h1>
     </div>
 
+    <v-text-field v-model="search" label="search" style="max-height: 70px;"></v-text-field>
     <v-data-iterator :items="room" hide-default-footer :search="search">
       <template v-slot:default="props">
-        <v-text-field v-model="search" label="search"></v-text-field>
 
         <v-row justify="center">
           <v-dialog v-model="dialog" persistent max-width="600px">
@@ -44,9 +44,7 @@
                         required
                       ></v-select>
                     </v-col>
-
                     <v-col cols="12" sm="6">
-
                       <v-autocomplete
                         v-model="equipements"
                         :items="select"
@@ -55,13 +53,10 @@
                         small-chips
                         label="Solo"
                         multiple
-                      ></v-autocomplete>
+                      >
+                      </v-autocomplete>
 
                     </v-col>
-
-
-
-
                   </v-row>
                 </v-container>
                 <small>*indicates required field</small>
