@@ -174,7 +174,14 @@ export default {
     equipements: [],
     eqp: [],
   }),
-  mounted() {
+  mounted: function () {
+    axios.get("http://localhost:3000/rooms/").then((response) => {
+      this.room = response.data;
+      console.log(response);
+      return response;
+    });
+  },
+  updated: function () {
     axios.get("http://localhost:3000/rooms/").then((response) => {
       this.room = response.data;
       console.log(response);
